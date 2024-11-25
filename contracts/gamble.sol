@@ -28,4 +28,8 @@ contract Gamble {
         }
         emit BetPlaced(msg.sender, amount, won);
     }
+
+    function getBalance() public view returns (uint) {
+        return balance[msg.sender];
+    }
 }
